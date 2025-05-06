@@ -1,6 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from io import StringIO
 
 data = pd.read_csv('tcp_congestion_control_benchmark.csv')
 
