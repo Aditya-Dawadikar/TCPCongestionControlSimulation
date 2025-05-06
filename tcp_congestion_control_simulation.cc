@@ -423,5 +423,15 @@ int main (int argc, char *argv[])
         }
     }
 
+    // Benchmarking
+    int rate = 10;
+    for (const auto& variant : tcpVariants)
+    {
+        for (int i = 1; i <= 10; ++i)
+        {
+            RunScenario4 (variant, rate);
+        }
+    }
+
     return 0;
 }
