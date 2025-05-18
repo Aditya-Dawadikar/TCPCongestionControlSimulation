@@ -14,7 +14,7 @@ This repository contains NS-3 simulations focusing on:
 ├── tcp_congestion_control_simulation.cc  # Simulates TCP variants across four scenarios
 ├── fat_tree_simulation.cc                # Simulates a fat-tree network topology
 ├── README.md                             # Project documentation
-└── results/                              # Output graphs and logs
+└── Analysis/                              # Output graphs and logs
 ```
 
 ---
@@ -23,7 +23,7 @@ This repository contains NS-3 simulations focusing on:
 
 ### 1. `tcp_congestion_control_simulation.cc`
 
-This simulation evaluates TCP variants (e.g., Tahoe, Reno, Cubic, Vegas) across four scenarios:
+This simulation evaluates TCP variants (e.g., Vegas, Veno, BBR, Cubic and Westwood+) across five scenarios:
 
 - **Scenario 1: Single Flow** – Basic TCP flow between two nodes.
 - **Scenario 2: MultiFlow** – Multiple concurrent TCP flows.
@@ -48,7 +48,6 @@ Ensure your system has the following:
   - Python 3 (version 3.6 or higher)
   - CMake
   - Git
-  - Development tools (`build-essential`, `python3-dev`, etc.)
 
 ### Installation Steps
 
@@ -107,17 +106,13 @@ cp /path/to/fat_tree_simulation.cc scratch/
 
 ## 📊 Output and Visualization
 
-Simulation results are saved under the `results/` directory and may include:
+Simulation results are saved under the `Analysis/` directory and may include:
 
 - **Throughput Graphs**
 - **Latency & RTT Plots**
 - **Congestion Window (CWND) Evolution**
 - **Packet Drop & Retransmission Logs**
 
-You can further analyze the results using:
-
-- Python scripts with `matplotlib`
-- `NetAnim` (for animated visualizations)
 
 ---
 
@@ -127,11 +122,6 @@ You can further analyze the results using:
 - [NS-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
 - [BBR: Bottleneck Bandwidth and RTT (Cardwell et al.)](https://queue.acm.org/detail.cfm?id=3022184)
 
----
-
-## 🤝 Contributions
-
-Pull requests are welcome! If you have suggestions for additional scenarios, TCP variants, or improvements to the visualization, feel free to contribute.
 
 ---
 
